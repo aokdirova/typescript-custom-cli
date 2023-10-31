@@ -1,15 +1,23 @@
 {
-  "name": "ts_cli",
+  "name": "ts-cli",
+  "bin": {
+    "practice": "./dist/index.js"
+  },
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "link-cli": "yarn --global unlink ts-cli && chmod +x ./dist/index.js && yarn --global link",
+    "dev": "tsc -w"
   },
   "keywords": [],
-  "author": "",
+  "author": "Aygul Okdirova",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^20.8.10",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "commander": "^11.1.0"
   }
 }
